@@ -1,14 +1,24 @@
-*{
+@font-face {
+  font-family: "Bebas Neue";
+  src: local("Bebas Neue Regular Regular"), local("BebasNeueRegular"),
+    url("..fonts/BebasNeueRegular.woff2") format("woff2"),
+    url("..fonts/BebasNeueRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
   box-sizing: border-box;
 }
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 .header {
   background-color: #635854;
   padding-top: 12px;
   padding-bottom: 12px;
-  border-bottom: 4px solid #3596F5;
+  border-bottom: 4px solid #3596f5;
 }
 .navbar {
   max-width: 1280px;
@@ -30,14 +40,14 @@ body {
 }
 .navbar-link {
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
 }
 .navbar-contacts {
   text-align: right;
 }
 .navbar-text {
   display: block;
-  color: #FFF;
+  color: #fff;
   margin-bottom: 4px;
   font-size: 14px;
   line-height: 16px;
@@ -47,5 +57,59 @@ body {
   font-size: 17px;
   line-height: 20px;
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
+}
+.main {
+  max-width: 1280px;
+  margin: auto;
+  padding-top: 54px;
+  display: flex;
+}
+.main-info {
+  flex-grow: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.home-image path {
+  opacity: 0;
+  cursor: pointer;
+}
+.home-image path:hover {
+  opacity: 1;
+}
+.counter-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.counter-button {
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.main-title {
+  margin: 0;
+  font-family: "BebasNeueRegular", sans-serif;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 44px;
+  color: #635854;
+  text-transform: uppercase;
+}
+.counter {
+  font-family: "BebasNeueRegular", sans-serif;
+  color: #635854;
+  font-size: 124px;
+  margin-top: 10px;
+}
+.button-primary {
+  background: #3596f5;
+  border-radius: 6px;
+  color: #fff;
+  border: none;
+  padding: 16px 36px;
+  cursor: pointer;
 }
